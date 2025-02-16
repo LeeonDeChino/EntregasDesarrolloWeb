@@ -13,6 +13,8 @@ En el año 2021 me gradué de mi primer carrera, Ingeniería Biomédica. Sin emb
 
 Me considero un amante de los videojuegos y de la programación, por lo que esta segunda carrera sí me apasiona y me motiva a mejorar día con día. Espero adquirir los conocimientos y experiencias suficientes para poder conseguir un trabajo en un gran estudio de videojuegos y dedicarme a la creación de ellos el resto de mi vida.
 
+En mis tiempos libres me gusta mucho ver películas y series. También disfruto mucho de escuchar música y pasar tiempo con mis amigos. Pero, a lo que más le dedico tiempo, definitivamente es a jugar videojuegos.
+
 El año pasado creé un estudio de videojuegos llamado **Crave Software**, actualmente tenemos solo 1 juego terminado, se llama BurgerGore y está disponible para todos en mi página de **itch.io** que puedes encontrar en los links de contacto al final de este documento.
 
 ## _Contacto_
