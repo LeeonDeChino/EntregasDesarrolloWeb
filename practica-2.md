@@ -2,7 +2,9 @@
 
 ## Kanban
 
-Kanban es un método ágil que se enfoca en la visualización del trabajo y la optimización del flujo de tareas. Es ampliamente usado en operaciones de mantenimiento, soporte técnico y entornos de producción continua.
+Kanban es una palabra japonesa que en español significa “tarjeta visual”. Esta metodología sugiere una comunicación en tiempo real y controla el trabajo a través de una línea de producción. Es decir, se crean tres columnas: pendientes, en proceso y terminadas. De esa forma, es posible clasificar las tareas y visualizar fácilmente sus avances.
+
+Es un método ágil que se enfoca en la visualización del trabajo y la optimización del flujo de tareas. Es ampliamente usado en operaciones de mantenimiento, soporte técnico y entornos de producción continua. Hay otras herramientas online similares a Kanban, como Trello y Monday.
 
 ### Características principales
 
