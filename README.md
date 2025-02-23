@@ -8,6 +8,6 @@
 
 - [Práctica 2](./practica-2.md)
 
-- [Currículum Web | Práctica 3](https://leeondechino.github.io/EntregasDesarrolloWeb/cv-web)
+- [Práctica 3 - Currículum Web](https://leeondechino.github.io/EntregasDesarrolloWeb/cv-web)
 
 
