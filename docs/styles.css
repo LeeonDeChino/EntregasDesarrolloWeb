@@ -22,7 +22,9 @@ body {
 :root {
     --text-color: #333;
     --bg-color: #f4f4f4;
+    --bg-color-2:#a091aa;
     --accent-color: #007bff;
+    --accent-color-2:#061e38;
 }
 
 /* 5. Color de enlaces */
@@ -34,7 +36,7 @@ a {
 
 /* 6. Color de enlaces en hover */
 a:hover {
-    color: darkblue;
+    color: var(--accent-color-2);
 }
 
 /* 7. Imágenes responsivas */
@@ -47,13 +49,27 @@ img {
 
 /* 9. Selectores de identificador */
 #inicio {
-    text-align: center;
-    font-weight: bold;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px;
 }
 
 #acerca {
-    font-style: italic;
-    text-align: justify;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px;
+}
+
+#habilidades {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px;
+}
+
+#proyectos {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px;
 }
 
 #contacto {
@@ -66,7 +82,7 @@ img {
 .menu {
     display: flex;
     justify-content: space-around;
-    background: var(--accent-color);
+    background: var(--bg-color-2);
     padding: 10px;
 }
 
