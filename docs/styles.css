@@ -1,3 +1,113 @@
-body{
-    font-family: sans-serif;
+/* 1. Tamaño de letra y box-sizing */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-size: 1rem;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* 3. Google Fonts */
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Box-sizing para todos los elementos */
+* {
+    box-sizing: border-box;
+  }
+
+/* 4. Variables de color */
+:root {
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+    --accent-color: #007bff;
+}
+
+/* 5. Color de enlaces */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+/* 6. Color de enlaces en hover */
+a:hover {
+    color: darkblue;
+}
+
+/* 7. Imágenes responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 9. Selectores de identificador */
+#inicio {
+    text-align: center;
+    font-weight: bold;
+}
+
+#acerca {
+    font-style: italic;
+    text-align: justify;
+}
+
+#contacto {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px;
+}
+
+/* 10. Selectores de clases */
+.menu {
+    display: flex;
+    justify-content: space-around;
+    background: var(--accent-color);
+    padding: 10px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* 11. Selectores descendientes */
+nav a {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+section p {
+    line-height: 1.5;
+}
+
+footer small a {
+    font-style: italic;
+}
+
+/* 12. Selectores de grupo */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+}
+
+ul, ol, li {
+    margin: 5px 0;
+    padding: 0;
+}
+
+button, input {
+    font-family: inherit;
+    padding: 8px;
+    border-radius: 5px;
 }
