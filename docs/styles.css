@@ -1,4 +1,7 @@
-/* 1. Tamaño de letra y box-sizing */
+* {
+    box-sizing: border-box;
+  }
+
 html {
     font-size: 100%;
 }
@@ -6,40 +9,33 @@ html {
 body {
     font-size: 1rem;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* 3. Google Fonts */
+    font-family: 'Poppins', sans-serif; 
     color: var(--text-color);
     background-color: var(--bg-color);
     margin: 0;
     padding: 0;
 }
 
-/* 2. Box-sizing para todos los elementos */
-* {
-    box-sizing: border-box;
-  }
-
-/* 4. Variables de color */
 :root {
-    --text-color: #333;
-    --bg-color: #f4f4f4;
-    --bg-color-2:#a091aa;
-    --accent-color: #007bff;
-    --accent-color-2:#061e38;
+    --text-color: #cccaca;
+    --bg-color: #2c2c2c;
+    --bg-color-2:#5e4570;
+    --bg-color-3: #131212;
+    --bg-color-4: #525151;
+    --accent-color: #fafafa;
+    --accent-color-2:#336aa5;
 }
 
-/* 5. Color de enlaces */
 a {
-    color: var(--accent-color);
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
 
-/* 6. Color de enlaces en hover */
 a:hover {
-    color: var(--accent-color-2);
+    color: var(--accent-color);
 }
 
-/* 7. Imágenes responsivas */
 img {
     max-width: 100%;
     height: auto;
@@ -47,83 +43,199 @@ img {
     margin: 0 auto;
 }
 
-/* 9. Selectores de identificador */
+.img-profile {
+    display: block;
+    margin: 20px auto; 
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    border: 2px solid black; 
+  }
+
+#start{
+    background-color: var(--bg-color-3);
+    color: var(--accent-color);
+    text-align: center;
+    font-weight: bold;
+}
 #inicio {
-    background-color: var(--accent-color);
-    color: white;
+    background-color: var(--bg-color-2);
+    color: var(--accent-color);
     padding: 10px;
 }
 
 #acerca {
-    background-color: var(--accent-color);
-    color: white;
+    background-color: var(--bg-color-2);
+    color: var(--accent-color);
     padding: 10px;
 }
 
 #habilidades {
-    background-color: var(--accent-color);
-    color: white;
+    background-color: var(--bg-color-2);
+    color: var(--accent-color);
     padding: 10px;
 }
 
 #proyectos {
-    background-color: var(--accent-color);
-    color: white;
+    background-color: var(--bg-color-2);
+    color: var(--accent-color);
     padding: 10px;
 }
 
-#contacto {
-    background-color: var(--accent-color);
-    color: white;
+.contacto h2 {
+    background-color: var(--bg-color-2);
+    color: var(--accent-color);
     padding: 10px;
 }
+.contacto ul {
+    padding: 5px;
+    list-style: square;
+}
+.contacto ul li {
+    padding: 5px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #4fdf86;
+}
+.contacto a {
+    color: #e66beb; 
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
 
-/* 10. Selectores de clases */
+.contacto a:hover {
+    color: #e7b9e9; 
+    transform: scale(1.1); 
+}
 .menu {
     display: flex;
     justify-content: space-around;
-    background: var(--bg-color-2);
-    padding: 10px;
+    background: var(--bg-color-4); 
+    padding: 15px;
+    border-bottom: 3px solid var(--accent-color-2);
+    font-size: 1.5rem;
+}
+
+.menu a {
+    color: #6872ff; 
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.menu a:hover {
+    color: var(--accent-color); 
+    transform: scale(1.1); 
 }
 
 .card {
-    border: 1px solid #ccc;
-    padding: 15px;
+    background: #200e49;
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: justify;
+  }
+
+  .card-title{
+    text-align:center;
+    color:var(--accent-color);
+    font-size:1.5rem;
+  }
+
+  .card-img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .card-btn {
+    display: block; 
+    width: fit-content; 
+    margin: 10px auto;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
     border-radius: 5px;
-}
+    text-align: center;
+  }
+
+  .card-btn:hover {
+    background-color: #0056b3;
+  }
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
 
 .highlight {
     background-color: yellow;
     font-weight: bold;
 }
 
-/* 11. Selectores descendientes */
-nav a {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
 
-section p {
-    line-height: 1.5;
-}
-
-footer small a {
-    font-style: italic;
-}
-
-/* 12. Selectores de grupo */
-h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
-    color: #222;
-}
-
-ul, ol, li {
-    margin: 5px 0;
-    padding: 0;
-}
-
-button, input {
-    font-family: inherit;
-    padding: 8px;
+.skills h3 {
+    background-color: #124466;
+    color:var(--accent-color);
+    padding: 5px;
     border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+
+  .skills table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 20px; 
+    border: 2px solid white; 
+    border-radius: 10px;
+    overflow: hidden; 
+  }
+  
+
+  .skills td {
+    border: 1px solid #ddd;
+    color:var(--accent-color);
+    padding: 10px;
+    text-align: left;
+  }
+  
+ 
+  .skills table tr:first-child td {
+    background-color: #5dade2; ;
+  }
+  
+
+  .skills table tr:last-child td {
+    background-color: #2e86c1;
+  }
+  .skills table tr:nth-child(2) td {
+    background-color: #2874a6;
+  }
+ 
+  .skills table tr:nth-child(3) td {
+    background-color: #1b4f72;
+  }
+
+  footer {
+    text-align: right; 
+    padding: 15px;
+    background-color: var(--bg-color-3);
+}
+
+footer a {
+    color: var(--accent-color-2); 
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: var(--accent-color); 
+    text-decoration: underline;
 }

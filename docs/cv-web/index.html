@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h1 id="start">Leonardo Ramírez Gutiérrez</h1>
+        <h1 id="start">Leonardo Ramírez Gutiérrez - CV Web</h1>
         <nav class="menu">        
               <a href="#inicio">Inicio</a>
                     
@@ -34,6 +34,9 @@
         <hr>
         <section>
           <h2 id="acerca">Acerca</h2>
+
+          <img  class="img-profile" src="/EntregasDesarrolloWeb/img/Pic1.jpeg" alt="FotoPerfil">
+
           <p>
             En el año 2021, me gradué de mi primer carrera, Ingeniería Biomédica. Sin embargo, nunca terminó de gustarme y decidí que no quería dedicarme a eso, por lo que decidí empezar a estudiar una nueva carrera: Desarrollo de Software Interactivo para Videojuegos, en el Instituto AMERIKE.
           </p>
@@ -49,66 +52,75 @@
           <p>
             En 2024 creé un estudio de videojuegos llamado Crave Software, actualmente tenemos solo 1 juego terminado, se llama BurgerGore y está disponible para todos en mi página de itch.io que puedes encontrar en los links de contacto al final de este documento.
           </p>
-          <img src="/EntregasDesarrolloWeb/img/Pic1.jpeg" alt="FotoPerfil">
         </section>
         <hr>
         <section>
           <h2 id="habilidades">Habilidades</h2>
-          <h3>Técnicas:</h3>
-          <ul>
-            <li>Programación: Python, JavaScript, C++, C#</li>
-            <li>Software: AutoCAD, MATLAB, Unity, Unreal </li>
-            <li>Desarrollo de videojuegos</li>
-            <li>Análisis y modelado matemático</li>
-          </ul>
-          <h3>Blandas:</h3>
-          <ul>
-            <li>Resolución de problemas</li>
-            <li>Trabajo en equipo</li>
-            <li>Pensamiento lógico</li>
-            <li>Adaptabilidad</li>
-          </ul>
+        
+          <div class="skills">
+            <h3>Técnicas:</h3>
+            <table>
+              <tr><td>Programación: Python, JavaScript, C++, C#</td></tr>
+              <tr><td>Software: AutoCAD, MATLAB, Unity, Unreal</td></tr>
+              <tr><td>Desarrollo de videojuegos</td></tr>
+              <tr><td>Análisis y modelado matemático</td></tr>
+            </table>
+          </div>
+        
+          <div class="skills">
+            <h3>Blandas:</h3>
+            <table>
+              <tr><td>Resolución de problemas</td></tr>
+              <tr><td>Trabajo en equipo</td></tr>
+              <tr><td>Pensamiento lógico</td></tr>
+              <tr><td>Adaptabilidad</td></tr>
+            </table>
+          </div>
         </section>
         <hr>
         <section>
           <h2 id="proyectos">Proyectos</h2>
-          <article class="card">
-            <details open>
-              <summary>BurgerGore</summary>
-              <div>
-                <p>BurgerGore es el primer videojuego que desarrollé y publiqué. Es un 2D shooter con vista top-down. Está inspirado en juegos tipo Vampire Survivors, pero en este juego en vez de enfrentarte a monstruos, te enfrentas a deliciosa comida chatarra. <a href=" https://cravesoftware.itch.io/burgergore" target="_blank">Link al juego</a></p>
-                <img src="/EntregasDesarrolloWeb/img/MenuBG.png" alt="BurgerGore" />
-              </div>
-            </details>
-          </article>
-          <article class="card">
-            <details open>
-              <summary>Cubical Defense</summary>
-              <div>
-                <p>Cubical Defense es un juego que desarrollamos en equipo en el 3° semestre de la carrera. Se trata de un Tower Defense bastante sencillo, son cubos disparandole a esferas y tiene un estilo neon bastante llamativo.</p>
-                <img src="/EntregasDesarrolloWeb/img/CubicalDefense.png" alt="CubicalDefense" />
-              </div>
-            </details>
-          </article>
-          <article class="card">
-            <details open>
-              <summary>Wiki de Bandas</summary>
-              <div>
-                <p>La wiki de Bandas de Rock y Metal es un proyecto que realicé en 3° semestre cuando aprendíamos a utilizar HTML.<a href="https://leeondechino.github.io/RockBandsWiki/" target="_blank">Link a la wiki</a></p>
-                <img src="/EntregasDesarrolloWeb/img/BandasWiki.png" alt="BandasWiki" />
-              </div>
-            </details>
-          </article>
+          <div class="projects-container">
+            <article class="card">
+              <p class="card-title">BurgerGore</p>
+              <img class="card-img" src="/EntregasDesarrolloWeb/img/MenuBG.png" alt="BurgerGore" />
+              <p>BurgerGore es el primer videojuego que desarrollé y publiqué. Es un 2D shooter con vista top-down. Está inspirado en juegos tipo Vampire Survivors, pero en este juego en vez de enfrentarte a monstruos, te enfrentas a deliciosa comida chatarra.</p>
+              <a href="https://cravesoftware.itch.io/burgergore" target="_blank" class="card-btn">Link al juego</a>
+            </article>
+            
+            <article class="card">
+              <p class="card-title">Cubical Defense</p>
+              <img class="card-img" src="/EntregasDesarrolloWeb/img/CubicalDefense.png" alt="CubicalDefense" />
+              <p>Cubical Defense es un juego que desarrollamos en equipo en el 3° semestre de la carrera. Se trata de un Tower Defense bastante sencillo, son cubos disparándole a esferas y tiene un estilo neon bastante llamativo.</p>
+              <a href="https://gumbal117.itch.io/cubical-defense" target="_blank" class="card-btn">Link al juego</a>
+            </article>
+            
+            <article class="card">
+              <p class="card-title">Wiki de Bandas</p>
+              <img class="card-img" src="/EntregasDesarrolloWeb/img/BandasWiki.png" alt="BandasWiki" />
+              <p>La wiki de Bandas de Rock y Metal es un proyecto que realicé en 3° semestre cuando aprendíamos a utilizar HTML.</p>
+              <a href="https://leeondechino.github.io/RockBandsWiki/" target="_blank" class="card-btn">Link a la wiki</a>
+            </article>
+
+            <article class="card">
+              <p class="card-title">Crave Software</p>
+              <img class="card-img" src="/EntregasDesarrolloWeb/img/LogoCrave.ico" alt="CraveSoftware" />
+              <p>Crave Software es un estudio de videojuegos fundado por mi en 2023. Actualmente contamos con algunos juegos disponibles en Itch.io</p>
+              <a href="https://cravesoftware.itch.io/" target="_blank" class="card-btn">Link a Itch.io</a>
+            </article>
+          </div>
         </section>
         <hr>
-        <section>
-          <h2 id="contacto">Contacto</h2>
-          <ul>
-            <li>Correo: cdmx2635@amerike.edu.mx</li>
-            <li>Teléfono: +52 5513420879</li>
-            <li><a href="https://www.instagram.com/leoragut/" target="_blank">Instagram</a> </li>
-            <li><a href="https://cravesoftware.itch.io/" target="_blank">Itch.io</a></li>
-          </ul>
+        <section  id="contacto" class="contacto" >
+            <h2 >Contacto</h2>
+            <div>
+              <ul>
+                <li>Correo: cdmx2635@amerike.edu.mx</li>
+                <li>Teléfono: +52 5513420879</li>
+                <li><a href="https://www.instagram.com/leoragut/" target="_blank">Instagram</a> </li>
+                <li><a href="https://cravesoftware.itch.io/" target="_blank">Itch.io</a></li>
+              </ul>
+            </div>           
         </section>
         <hr>
       </main>
