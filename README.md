@@ -10,6 +10,8 @@
 
 - [Práctica 3 - Currículum Web](https://leeondechino.github.io/EntregasDesarrolloWeb/cv-web)
 
-- [Práctica 3 - CV Web con CSS](https://leeondechino.github.io/EntregasDesarrolloWeb/cv-web)
+- [Práctica 4 - CV Web con CSS](https://leeondechino.github.io/EntregasDesarrolloWeb/cv-web)
+
+- [Práctica 5 - CV Web con Grid CSS](https://leeondechino.github.io/EntregasDesarrolloWeb/cv-web-v2)
 
 
