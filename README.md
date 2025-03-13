@@ -14,4 +14,6 @@
 
 - [Práctica 5 - CV Web con Grid CSS](https://leeondechino.github.io/EntregasDesarrolloWeb/cv-web-v2)
 
+- [Práctica 6 - Simulador de tienda en línea](https://leeondechino.github.io/EntregasDesarrolloWeb/practica-6)
+
 
