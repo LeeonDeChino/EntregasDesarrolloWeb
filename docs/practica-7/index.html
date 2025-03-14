@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/EntregasDesarrolloWeb/practica-7/styles.css">
+    <link rel="icon" href="/EntregasDesarrolloWeb/img/LogoCrave.ico">
+</head>
+<body>
+    <header>
+        <h1>CraveSoftware Store</h1>
+        <img src="/EntregasDesarrolloWeb/img/LogoCrave.ico" alt="Logo Crave">
+      </header>
+      <main>
+        <section id="productos">
+          <h2>Productos</h2>
+          <article
+            class="producto"
+            data-id="1"
+            data-nombre="Labubu"
+            data-precio="700"
+          >
+            Labubu - $700
+          </article>
+          <article
+            class="producto"
+            data-id="2"
+            data-nombre="FunkoPop"
+            data-precio="600"
+          >
+            Funko Pop - $600
+          </article>
+          <article
+            class="producto"
+            data-id="3"
+            data-nombre="FidgetSpinner"
+            data-precio="150"
+          >
+            Fidget Spinner - $150
+          </article>
+          <article
+            class="producto"
+            data-id="4"
+            data-nombre="Slime"
+            data-precio="90"
+          >
+            Slime - $90
+          </article>
+          <article
+          class="producto"
+          data-id="5"
+          data-nombre="Rubik"
+          data-precio="40"
+        >
+          Cubo Rubik - $40
+        </article>
+        </section>
+        <section id="mensaje-compra" class="hidden">
+          <h2>¡Compra realizada con éxito!</h2>
+          <p>Gracias por su compra.</p>
+        </section>
+        <section id="carrito" class="carrito">
+          <h2>Carrito de Compras</h2>
+          <ul id="lista-carrito"></ul>
+          <p>Total: $<span id="total-carrito">0</span></p>
+          <button id="btn-compra">Comprar</button>
+        </section>
+      </main>
+      <footer>
+        <small>Sitio hecho por <a href="https://leeondechino.itch.io/" target="_blank"><b><i>Crave Software</i></b></a></small>
+      </footer>
+    <script src="/EntregasDesarrolloWeb/practica-7/main.js"></script>
+</body>
+</html>

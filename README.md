@@ -16,4 +16,6 @@
 
 - [Práctica 6 - Simulador de tienda en línea](https://leeondechino.github.io/EntregasDesarrolloWeb/practica-6)
 
+- [Práctica 7 - Simulador de tienda en línea con DOM](https://leeondechino.github.io/EntregasDesarrolloWeb/practica-7)
+
 
