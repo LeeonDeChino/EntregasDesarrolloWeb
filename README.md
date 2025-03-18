@@ -18,4 +18,6 @@
 
 - [Práctica 7 - Simulador de tienda en línea con DOM](https://leeondechino.github.io/EntregasDesarrolloWeb/practica-7)
 
+- [Práctica 8 - Formularios en JS](https://leeondechino.github.io/EntregasDesarrolloWeb/practica-8)
+
 
