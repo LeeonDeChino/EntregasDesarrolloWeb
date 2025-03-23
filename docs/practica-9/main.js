@@ -1,138 +1,71 @@
-const d = document;
-const $listaCarrito = d.querySelector("#lista-carrito");
-const $totalCarrito = d.querySelector("#total-carrito");
-const $btnCompra = d.querySelector("#btn-compra");
-const $mensajeCompra = d.querySelector("#mensaje-compra");
-const $carrito = d.querySelector("#carrito");
-const $listaProductos = d.querySelector("#lista-productos");
+document.addEventListener("DOMContentLoaded", () => {
+  const listaProductos = document.getElementById("lista-productos");
+  const listaCarrito = document.getElementById("lista-carrito");
+  const totalCarrito = document.getElementById("total-carrito");
+  const btnCompra = document.getElementById("btn-compra");
+  const mensajeCompra = document.getElementById("mensaje-compra");
+  let carrito = [];
 
-// Objeto para rastrear productos en el carrito
-let carrito = {};
-
-// Función para actualizar el carrito en la UI
-function actualizarCarrito() {
-  $listaCarrito.innerHTML = "";
-  let total = 0;
-
-  for (let id in carrito) {
-    const producto = carrito[id];
-
-    const $itemCarrito = d.createElement("li");
-    $itemCarrito.textContent = `${producto.nombre} - $${producto.precio} x ${producto.cantidad}`;
-
-    // Contador de cantidad
-    const $cantidadSpan = d.createElement("span");
-    $cantidadSpan.textContent = producto.cantidad;
-    $cantidadSpan.classList.add("cantidad");
-
-    // Botón para aumentar cantidad
-    const $btnMas = d.createElement("button");
-    $btnMas.textContent = "+";
-    $btnMas.addEventListener("click", () => {
-      carrito[id].cantidad++;
-      actualizarCarrito();
-    });
-
-    // Botón para disminuir cantidad
-    const $btnMenos = d.createElement("button");
-    $btnMenos.textContent = "-";
-    $btnMenos.addEventListener("click", () => {
-      if (carrito[id].cantidad > 1) {
-        carrito[id].cantidad--;
-      } else {
-        delete carrito[id];
-      }
-      actualizarCarrito();
-    });
-
-    $itemCarrito.appendChild($cantidadSpan);
-    $itemCarrito.appendChild($btnMas);
-    $itemCarrito.appendChild($btnMenos);
-    $listaCarrito.appendChild($itemCarrito);
-
-    total += producto.precio * producto.cantidad;
-  }
-
-  $totalCarrito.textContent = total;
-}
-
-// Evento para agregar productos al carrito
-d.addEventListener("click", function (e) {
-  if (e.target.matches(".producto")) {
-    const $producto = e.target;
-    let id = $producto.getAttribute("data-id");
-    let nombre = $producto.getAttribute("data-nombre");
-    let precio = parseFloat($producto.getAttribute("data-precio"));
-
-    if (carrito[id]) {
-      carrito[id].cantidad++;
-    } else {
-      carrito[id] = { nombre, precio, cantidad: 1 };
-    }
-
-    actualizarCarrito();
-  }
-});
-
-// Simulación de compra con loader y contador
-$btnCompra.addEventListener("click", function () {
-  if ($listaCarrito.children.length > 0) {
-    let contador = 5;
-
-    const $loader = d.createElement("div");
-    $loader.classList.add("mensaje-proceso");
-    $loader.innerHTML = `Procesando compra... <br><span class="loader">${contador}</span>`;
-    $mensajeCompra.innerHTML = "";
-    $mensajeCompra.appendChild($loader);
-    $mensajeCompra.classList.remove("hidden");
-
-    // Contador regresivo
-    const intervalo = setInterval(() => {
-      contador--;
-      $loader.querySelector(".loader").textContent = contador;
-
-      if (contador === 0) {
-        clearInterval(intervalo);
-        $mensajeCompra.innerHTML = "<h2>¡Compra realizada con éxito!</h2><p>Gracias por su compra.</p>";
-        carrito = {};
-        actualizarCarrito();
-      }
-    }, 1000);
-  } else {
-    alert("El carrito está vacío");
-  }
-
-  async function obtenerProductosFake() {
-    try {
-      let response = await fetch("https://fakestoreapi.com/products");
-      let productos = await response.json();
-  
-      // Limpiar productos previos
-      $listaProductos.innerHTML = "";
-  
-      productos.forEach((producto) => {
-        const $producto = d.createElement("article");
-        $producto.classList.add("producto");
-        $producto.setAttribute("data-id", producto.id);
-        $producto.setAttribute("data-nombre", producto.title);
-        $producto.setAttribute("data-precio", producto.price);
-  
-        $producto.innerHTML = `
-          <img src="${producto.image}" alt="${producto.title}" width="100">
-          <p>${producto.title} - $${producto.price}</p>
-        `;
-  
-        $listaProductos.appendChild($producto);
+  // Cargar productos desde la FakeStore API
+  fetch("https://fakestoreapi.com/products")
+      .then(response => response.json())
+      .then(data => {
+          data.forEach(producto => {
+              const productoElemento = document.createElement("div");
+              productoElemento.classList.add("producto");
+              productoElemento.innerHTML = `
+                  <img src="${producto.image}" alt="${producto.title}" class="producto-img">
+                  <h3>${producto.title}</h3>
+                  <p>Precio: $${producto.price.toFixed(2)}</p>
+                  <button onclick="agregarAlCarrito(${producto.id}, '${producto.title}', ${producto.price})">Agregar al Carrito</button>
+              `;
+              listaProductos.appendChild(productoElemento);
+          });
       });
-    } catch (error) {
-      console.error("Error al obtener productos:", error);
-    }
-  }
-  
-  
-  document.addEventListener("DOMContentLoaded", function (e) {
-    console.log(e);
-    obtenerProductosFake();
-  });
 
+  // Agregar producto al carrito
+  window.agregarAlCarrito = (id, title, price) => {
+      const itemIndex = carrito.findIndex(item => item.id === id);
+      if (itemIndex !== -1) {
+          carrito[itemIndex].cantidad += 1;
+      } else {
+          carrito.push({ id, title, price, cantidad: 1 });
+      }
+      actualizarCarrito();
+  };
+
+  // Eliminar producto del carrito
+  window.eliminarDelCarrito = (id) => {
+      carrito = carrito.filter(item => item.id !== id);
+      actualizarCarrito();
+  };
+
+  // Actualizar la vista del carrito
+  function actualizarCarrito() {
+      listaCarrito.innerHTML = "";
+      let total = 0;
+      carrito.forEach(item => {
+          total += item.price * item.cantidad;
+          const li = document.createElement("li");
+          li.innerHTML = `
+              ${item.title} - $${(item.price * item.cantidad).toFixed(2)} (x${item.cantidad})
+              <button onclick="eliminarDelCarrito(${item.id})">Eliminar</button>
+          `;
+          listaCarrito.appendChild(li);
+      });
+      totalCarrito.textContent = total.toFixed(2);
+  }
+
+  // Simular compra
+  btnCompra.addEventListener("click", () => {
+      if (carrito.length === 0) {
+          mensajeCompra.textContent = "El carrito está vacío.";
+      } else {
+          mensajeCompra.textContent = "¡Gracias por tu compra!";
+          carrito = [];
+          actualizarCarrito();
+      }
+      mensajeCompra.classList.remove("hidden");
+      setTimeout(() => mensajeCompra.classList.add("hidden"), 3000);
+  });
 });

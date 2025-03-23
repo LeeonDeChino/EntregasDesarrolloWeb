@@ -20,4 +20,6 @@
 
 - [Práctica 8 - Formularios en JS](https://leeondechino.github.io/EntregasDesarrolloWeb/practica-8)
 
+- [Práctica 9 - Simulador de tienda en línea con Fake Store API](https://leeondechino.github.io/EntregasDesarrolloWeb/practica-9)
+
 
