@@ -34,27 +34,32 @@ document.addEventListener("DOMContentLoaded", () => {
       actualizarCarrito();
   };
 
-  // Eliminar producto del carrito
-  window.eliminarDelCarrito = (id) => {
-      carrito = carrito.filter(item => item.id !== id);
-      actualizarCarrito();
-  };
+  window.modificarCantidad = (id, cambio) => {
+    const itemIndex = carrito.findIndex(item => item.id === id);
+    if (itemIndex !== -1) {
+        carrito[itemIndex].cantidad += cambio;
+        if (carrito[itemIndex].cantidad <= 0) {
+            carrito.splice(itemIndex, 1);
+        }
+        actualizarCarrito();
+    }
+};
 
-  // Actualizar la vista del carrito
-  function actualizarCarrito() {
-      listaCarrito.innerHTML = "";
-      let total = 0;
-      carrito.forEach(item => {
-          total += item.price * item.cantidad;
-          const li = document.createElement("li");
-          li.innerHTML = `
-              ${item.title} - $${(item.price * item.cantidad).toFixed(2)} (x${item.cantidad})
-              <button onclick="eliminarDelCarrito(${item.id})">Eliminar</button>
-          `;
-          listaCarrito.appendChild(li);
-      });
-      totalCarrito.textContent = total.toFixed(2);
-  }
+function actualizarCarrito() {
+    listaCarrito.innerHTML = "";
+    let total = 0;
+    carrito.forEach(item => {
+        total += item.price * item.cantidad;
+        const li = document.createElement("li");
+        li.innerHTML = `
+            ${item.title} - $${(item.price * item.cantidad).toFixed(2)} (x${item.cantidad})
+            <button onclick="modificarCantidad(${item.id}, -1)">-</button>
+            <button onclick="modificarCantidad(${item.id}, 1)">+</button>
+        `;
+        listaCarrito.appendChild(li);
+    });
+    totalCarrito.textContent = total.toFixed(2);
+}
 
   // Simular compra
   btnCompra.addEventListener("click", () => {
