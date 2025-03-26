@@ -63,14 +63,22 @@ function actualizarCarrito() {
 
   // Simular compra
   btnCompra.addEventListener("click", () => {
-      if (carrito.length === 0) {
-          mensajeCompra.textContent = "El carrito está vacío.";
-      } else {
-          mensajeCompra.textContent = "¡Gracias por tu compra!";
-          carrito = [];
-          actualizarCarrito();
-      }
-      mensajeCompra.classList.remove("hidden");
-      setTimeout(() => mensajeCompra.classList.add("hidden"), 3000);
-  });
+    if (carrito.length === 0) {
+        mensajeCompra.textContent = "El carrito está vacío.";
+        mensajeCompra.classList.remove("hidden");
+        setTimeout(() => mensajeCompra.classList.add("hidden"), 3000);
+    } else {
+        mensajeCompra.innerHTML = `<span class="loader"></span> Procesando compra...`;
+        mensajeCompra.classList.remove("hidden");
+
+        setTimeout(() => {
+            mensajeCompra.textContent = "¡Gracias por tu compra!";
+            carrito = [];
+            actualizarCarrito();
+
+            setTimeout(() => mensajeCompra.classList.add("hidden"), 3000);
+        }, 3000);
+    }
+});
+
 });
