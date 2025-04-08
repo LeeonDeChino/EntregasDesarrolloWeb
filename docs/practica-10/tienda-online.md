@@ -20,7 +20,7 @@ CraveSoftware Merch Store es la tienda oficial de merchandising de CraveSoftware
 ---
 
 ## Moodboard del diseño de la UI
-![Moodboard](assets/moodboard_ui.png)
+![Moodboard](/docs/practica-10/assets/Moodboard.png)
 
 ---
 
@@ -38,3 +38,7 @@ CraveSoftware Merch Store es la tienda oficial de merchandising de CraveSoftware
 10. Se procede con el envío del producto según la dirección proporcionada.
 
 ---
+
+## Diagrama de Flujo del proceso de compra
+
+![Moodboard](/docs/practica-10/assets/DiagramaFlujo.png)
