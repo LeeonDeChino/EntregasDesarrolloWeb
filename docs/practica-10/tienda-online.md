@@ -9,13 +9,13 @@ CraveSoftware Merch Store es la tienda oficial de merchandising de CraveSoftware
 
 ## Inventario de productos
 
-| ID  | Producto       | Descripción                                       | Precio (USD) | Stock |
-|-----|---------------|--------------------------------------------------|-------------|-------|
-| 001 | Camiseta      | Camiseta 100% algodón con logo CraveSoftware     | 25          | 50    |
-| 002 | Gorra         | Gorra ajustable con bordado del logo             | 20          | 30    |
-| 003 | Hoodie        | Sudadera con capucha y diseño exclusivo          | 45          | 20    |
-| 004 | Taza          | Taza de cerámica con logo CraveSoftware          | 15          | 40    |
-| 005 | Sticker Pack  | Pack de stickers con diseños únicos              | 10          | 100   |
+| ID  | Producto       | Descripción                                       | Precio (USD) | Stock | Categoría |
+|-----|---------------|--------------------------------------------------|-------------|-------|---------------|
+| 001 | Camiseta      | Camiseta 100% algodón con logo CraveSoftware     | 25          | 50| Tallas: S, M, L, XL   |
+| 002 | Gorra         | Gorra ajustable con bordado del logo             | 20          | 30    | Colores: Negro, Blanco, Gris |
+| 003 | Hoodie        | Sudadera con capucha y diseño exclusivo          | 45          | 20  | Tallas: S, M, L, XL   |
+| 004 | Taza          | Taza de cerámica con logo CraveSoftware          | 15          | 40    | Diseños: Clásico, PixelArt, DarkMode |
+| 005 | Sticker Pack  | Pack de stickers con diseños únicos              | 10          | 100   | Versión: Básica, Deluxe, Holográfica |
 
 ---
 

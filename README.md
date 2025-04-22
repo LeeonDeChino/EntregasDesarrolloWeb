@@ -23,3 +23,5 @@
 - [Práctica 9 - Simulador de tienda en línea con Fake Store API](https://leeondechino.github.io/EntregasDesarrolloWeb/practica-9)
 
 - [Práctica 10 - Tienda Online](./docs/practica-10/tienda-online.md)
+
+- [Práctica 11 - Modelado de Tienda Online](./docs/practica-11/modelado-tienda.md)
