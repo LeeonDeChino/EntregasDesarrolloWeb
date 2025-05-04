@@ -25,3 +25,5 @@
 - [Práctica 10 - Tienda Online](./docs/practica-10/tienda-online.md)
 
 - [Práctica 11 - Modelado de Tienda Online](./docs/practica-11/modelado-tienda.md)
+
+- [Práctica 12 - Base de datos con Supabase](./docs/practica-11/modelado-tienda.md)
